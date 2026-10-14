@@ -80,21 +80,23 @@ export const projects = [
     tags: ['OpenCV', 'dlib', 'SciPy', 'Python'],
   },
   {
-    title: 'WingIt',
-    kind: 'UI/UX and mobile app',
+    title: 'Beaglex',
+    kind: 'Systems and simulation',
     summary:
-      'A flight and hotel booking platform, designed in Figma and built as a cross-platform Flutter app with real-time flight data.',
+      'An agent-based stock market simulator in C++20 where trading strategies evolve, running live in your browser via WebAssembly.',
     points: [
-      'Interactive Figma prototypes following modern UI/UX principles',
-      'Cross-platform mobile app built with Flutter and Android Studio',
-      'FlightRadar24 API integration for live flight information',
+      'Limit order book matching engine with price-time priority, benchmarked and fuzz-tested',
+      '152 trading agents whose market reproduces statistical properties of real stock returns',
+      'Genetic algorithm that rediscovered market making; experiments on algorithmic trading and stability',
     ],
-    tags: ['Flutter', 'Figma', 'REST APIs'],
+    tags: ['C++20', 'Genetic algorithms', 'WebAssembly', 'TypeScript'],
+    live: 'https://amalrtms.github.io/beaglex/',
+    code: 'https://github.com/amalrtms/beaglex',
   },
 ];
 
 export const skills = [
-  { group: 'Languages', items: ['Python', 'C', 'JavaScript', 'SQL', 'HTML/CSS'] },
+  { group: 'Languages', items: ['Python', 'C', 'C++', 'JavaScript', 'SQL', 'HTML/CSS'] },
   { group: 'Frontend and web', items: ['React', 'Tailwind CSS', 'Django'] },
   { group: 'Backend and databases', items: ['Supabase', 'PostgreSQL', 'MySQL'] },
   {
@@ -102,7 +104,7 @@ export const skills = [
     items: ['Machine learning', 'Deep learning', 'NLP', 'Computer vision', 'Federated learning', 'OpenCV'],
   },
   { group: 'Mobile and design', items: ['Flutter', 'Figma', 'Android Studio'] },
-  { group: 'Tools and deployment', items: ['Git/GitHub', 'Vercel'] },
+  { group: 'Tools and deployment', items: ['Git/GitHub', 'Vercel', 'WebAssembly'] },
   {
     group: 'Core CS',
     items: ['Data structures and algorithms', 'OOP and design', 'DBMS', 'Computer networks', 'Network security'],

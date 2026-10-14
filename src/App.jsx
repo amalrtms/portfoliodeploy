@@ -156,10 +156,19 @@ function Projects() {
                   <div className="tags">
                     {p.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
                   </div>
-                  {p.live && (
-                    <a className="link-arrow" href={p.live} target="_blank" rel="noreferrer">
-                      Live site <Icon name="arrow" size={16} />
-                    </a>
+                  {(p.live || p.code) && (
+                    <div className="project-links">
+                      {p.code && (
+                        <a className="link-arrow" href={p.code} target="_blank" rel="noreferrer">
+                          <Icon name="github" size={16} /> Code <Icon name="arrow" size={16} />
+                        </a>
+                      )}
+                      {p.live && (
+                        <a className="link-arrow" href={p.live} target="_blank" rel="noreferrer">
+                          Live site <Icon name="arrow" size={16} />
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               </SpotlightCard>
