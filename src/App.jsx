@@ -4,6 +4,8 @@ import SplitText from './components/SplitText';
 import Icon from './components/Icons';
 import { ShinyText, Reveal, CountUp, SpotlightCard, LogoLoop, ClickSpark } from './components/Effects';
 import useScrolled from './components/useScrolled';
+import TargetCursor from './components/TargetCursor';
+import useSmoothScroll from './components/useSmoothScroll';
 import { profile, stats, about, projects, skills, education, certifications } from './data';
 
 const NAV = [
@@ -281,8 +283,10 @@ function Contact() {
 }
 
 export default function App() {
+  useSmoothScroll();
   return (
     <>
+      <TargetCursor />
       <ClickSpark />
       <Nav />
       <main>

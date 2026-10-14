@@ -20,7 +20,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-padding-top: 80px; }
 body {
   margin: 0;
   background: var(--bg);
@@ -240,6 +240,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .contact-card { padding: 52px 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
   .loop-track, .shiny-text, .pulse { animation: none; }
 }
+
+/* Target cursor */
+.hide-cursor, .hide-cursor * { cursor: none !important; }
+.cur-target, .cur-target > span { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 90; }
+.cur-target { inset: 0; opacity: 0; transition: opacity 0.2s; }
+.cur-target-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.cur-corner { width: 8px; height: 8px; margin: -1px 0 0 -1px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); transform-origin: 1px 1px; transition: border-color 0.2s; }
+.cur-target.is-locked .cur-corner { border-color: var(--bark); }
